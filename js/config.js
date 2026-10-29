@@ -1,5 +1,5 @@
 /**
- * Brilho Total Limpeza - Arquivo de Configuração Centralizada
+ * Miss Clean - Arquivo de Configuração Centralizada
  * 
  * Informações reais de atendimento, contatos e serviços da empresa.
  */
@@ -7,19 +7,19 @@
 const SITE_CONFIG = {
   // Informações da Empresa
   company: {
-    name: "Brilho Total Limpeza",
+    name: "Miss Clean",
     tagline: "Limpeza Predial, Organização de Closet e Limpeza Pós-Obra",
-    description: "Serviços especializados em limpeza predial para condomínios, organização profissional de closets e higienização técnica pós-obra com alto padrão de qualidade e pontualidade.",
+    description: "Serviços especializados em limpeza predial para condomínios, organização profissional de closets (Personal Organizer) e higienização técnica pós-obra em toda a cidade de São Paulo.",
     isDemo: false
   },
 
   // Configurações de Contato e WhatsApp
   contact: {
-    // WhatsApp Principal da Empresa
+    // WhatsApp Principal da Empresa (para onde vão todos os orçamentos e mensagens)
     whatsappRaw: "5511961816663",
     whatsappFormatted: "(11) 96181-6663",
     
-    // Telefone / WhatsApp de Emergência
+    // Contato Pessoal / Emergência
     emergencyRaw: "5511986412651",
     emergencyFormatted: "(11) 98641-2651",
     
@@ -27,16 +27,16 @@ const SITE_CONFIG = {
     email: "marcelaingridy@hotmail.com",
     
     // Horário de atendimento
-    businessHours: "Segunda a Sábado, das 07:30 às 19:00 (Plantão de Emergência Disponível)",
+    businessHours: "Segunda a Sábado, das 08:00 às 18:00",
     
     // Região de atendimento
-    serviceArea: "São Paulo - Capital, Região Metropolitana, Alphaville e Grande ABC",
+    serviceArea: "Atendimento em Toda a Cidade de São Paulo e Região Metropolitana",
     
     // Endereço / Referência de Atendimento
-    addressReference: "São Paulo - SP (Atendimento presencial em condomínios, residências e obras)",
+    addressReference: "São Paulo - SP (Atendimento em toda a capital, condomínios e residências)",
 
-    // Mensagem padrão ao clicar no WhatsApp principal
-    defaultMessage: "Olá! Gostaria de solicitar um orçamento com a Brilho Total Limpeza."
+    // Mensagem padrão ao clicar no WhatsApp da empresa
+    defaultMessage: "Olá! Gostaria de solicitar um orçamento com a Miss Clean."
   },
 
   // Serviços Oferecidos
@@ -45,7 +45,7 @@ const SITE_CONFIG = {
       id: "predial",
       title: "Limpeza Predial",
       badge: "Condomínios & Edifícios",
-      shortDescription: "Higienização completa e conservação de áreas comuns para condomínios residenciais e comerciais.",
+      shortDescription: "Higienização completa e conservação de áreas comuns para condomínios residenciais e comerciais em São Paulo.",
       image: "assets/images/predial.jpg",
       items: [
         "Halls de entrada, portarias e recepções",
@@ -53,13 +53,13 @@ const SITE_CONFIG = {
         "Salões de festas, academias e áreas de lazer",
         "Garagens, vidros de fachada e rotinas de manutenção"
       ],
-      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Limpeza Predial."
+      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Limpeza Predial com a Miss Clean."
     },
     {
       id: "closet",
       title: "Organização de Closet",
       badge: "Personal Organizer",
-      shortDescription: "Otimização de espaço, categorização e praticidade para closets, armários e guarda-roupas.",
+      shortDescription: "Otimização de espaço, categorização e praticidade para closets, armários e guarda-roupas com método profissional.",
       image: "assets/images/closet.jpg",
       items: [
         "Descarte consciente e triagem de peças com o cliente",
@@ -67,13 +67,13 @@ const SITE_CONFIG = {
         "Padronização de dobras e disposição de cabides",
         "Organização de calçados, bolsas, acessórios e roupas de cama"
       ],
-      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Organização de Closet."
+      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Organização de Closet com a Miss Clean."
     },
     {
       id: "pos-obra",
       title: "Limpeza Pós-Obra",
       badge: "Técnica & Pesada",
-      shortDescription: "Remoção técnica de poeira fina de gesso, resíduos de rejunte, tintas e acabamentos pós-reforma.",
+      shortDescription: "Remoção técnica de poeira fina de gesso, resíduos de argamassa, tintas e acabamentos pós-reforma.",
       image: "assets/images/pos-obra.jpg",
       items: [
         "Limpeza detalhada de vidros, esquadrias e trilhos",
@@ -81,7 +81,7 @@ const SITE_CONFIG = {
         "Aspiração profunda de poeira em todos os cantos e móveis",
         "Ambiente 100% pronto e limpo para você morar ou inaugurar"
       ],
-      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Limpeza Pós-Obra."
+      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Limpeza Pós-Obra com a Miss Clean."
     }
   ],
 
@@ -94,18 +94,18 @@ const SITE_CONFIG = {
     },
     {
       icon: "calendar-clock",
-      title: "Plantão e Atendimento Ágil",
-      description: "Linha direta de emergência e horários flexíveis para atender às necessidades urgentes do seu prédio ou imóvel."
+      title: "Pontualidade e Atendimento Ágil",
+      description: "Horários rigorosamente cumpridos de segunda a sábado das 08:00 às 18:00 em qualquer região de São Paulo."
     },
     {
       icon: "shield-check",
       title: "Cuidado e Respeito com Seus Bens",
-      description: "Profissionais qualificados com métodos seguros para não danificar tecidos finos, pisos nobres e acabamentos recentes."
+      description: "Métodos seguros para proteger tecidos nobres em closets, pisos finos e acabamentos novos pós-obra."
     },
     {
       icon: "sparkles",
       title: "Produtos e Equipamentos Profissionais",
-      description: "Aspiradores de alta potência, produtos específicos para cada superfície e materiais de organização modernos."
+      description: "Aspiradores de alta potência, produtos específicos para cada superfície e técnicas modernas de Personal Organizer."
     }
   ],
 
@@ -119,7 +119,7 @@ const SITE_CONFIG = {
     {
       step: "02",
       title: "Avaliação da Necessidade",
-      description: "Entendemos as particularidades do seu espaço, metragem, número de armários ou tamanho do condomínio."
+      description: "Entendemos as particularidades do seu espaço, metragem, número de armários ou porte do condomínio."
     },
     {
       step: "03",
@@ -131,20 +131,24 @@ const SITE_CONFIG = {
   // Perguntas Frequentes (FAQ)
   faq: [
     {
+      question: "Quais regiões de São Paulo a Miss Clean atende?",
+      answer: "Atendemos São Paulo inteiro: Zona Sul, Zona Oeste, Zona Norte, Zona Leste, Centro expandido, além de cidades da Região Metropolitana como Alphaville, Barueri e Grande ABC."
+    },
+    {
+      question: "Qual o horário de atendimento e funcionamento?",
+      answer: "Nosso atendimento é de segunda a sábado, das 08:00 às 18:00. Você pode agendar serviços pontuais ou recorrentes dentro deste período."
+    },
+    {
       question: "Como funciona a contratação da Limpeza Predial?",
       answer: "Atendemos condomínios residenciais e prédios comerciais com cronogramas personalizados: diários, semanais ou pontuais para eventos e manutenções especiais. Fornecemos proposta formal detalhada para síndicos e administradoras."
     },
     {
-      question: "Como funciona o serviço de Organização de Closet?",
-      answer: "Nossa especialista (Personal Organizer) avalia o volume de roupas, acessórios e o espaço disponível. Realizamos a triagem junto com você, aplicamos técnicas de dobras funcionais, padronizamos a distribuição e deixamos o dia a dia muito mais prático e elegante."
+      question: "Como funciona o serviço de Organização de Closet (Personal Organizer)?",
+      answer: "Avaliamos o volume de roupas, sapatos, acessórios e o espaço disponível. Realizamos a triagem junto com você, aplicamos técnicas de dobras funcionais, padronizamos a distribuição e deixamos seu armário muito mais prático e elegante."
     },
     {
-      question: "A Limpeza Pós-Obra retira toda a poeira de gesso e tinta?",
-      answer: "Sim! Utilizamos aspiradores profissionais de alta sucção com filtros especiais para reter poeira ultrafina de gesso e alvenaria, além de produtos e raspadores adequados para remoção de respingos de tinta sem arranhar pisos ou vidros."
-    },
-    {
-      question: "Qual o canal para atendimento urgente ou de emergência?",
-      answer: "Para situações urgentes que precisam de resolução imediata em condomínios ou imóveis, utilize nosso telefone/WhatsApp de emergência no número (11) 98641-2651."
+      question: "A Limpeza Pós-Obra retira toda a poeira fina de gesso e respingos de tinta?",
+      answer: "Sim! Utilizamos aspiradores industriais de alta sucção com filtros especiais para reter poeira ultrafina de gesso e alvenaria, além de produtos e raspadores adequados para remoção de respingos de tinta sem arranhar pisos, esquadrias ou vidros."
     },
     {
       question: "Quais são as formas de pagamento?",
