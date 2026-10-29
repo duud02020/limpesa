@@ -35,8 +35,12 @@ function applyConfigData() {
     el.textContent = SITE_CONFIG.contact.whatsappFormatted;
   });
 
+  document.querySelectorAll("[data-bind='emergencyFormatted']").forEach(el => {
+    el.textContent = SITE_CONFIG.contact.emergencyFormatted;
+  });
+
   document.querySelectorAll("[data-bind='phoneSecondary']").forEach(el => {
-    el.textContent = SITE_CONFIG.contact.phoneSecondaryFormatted;
+    el.textContent = SITE_CONFIG.contact.emergencyFormatted;
   });
 
   document.querySelectorAll("[data-bind='email']").forEach(el => {
@@ -62,10 +66,16 @@ function applyConfigData() {
     el.textContent = SITE_CONFIG.company.tagline;
   });
 
-  // Atualiza links genéricos do WhatsApp
+  // Atualiza links genéricos do WhatsApp Principal
   const defaultWhatsAppUrl = buildWhatsAppLink(SITE_CONFIG.contact.defaultMessage);
   document.querySelectorAll("[data-whatsapp-general]").forEach(link => {
     link.href = defaultWhatsAppUrl;
+  });
+
+  // Atualiza links de Emergência / Plantão
+  const emergencyWhatsAppUrl = buildWhatsAppLink("Olá! Preciso de atendimento ou orçamento de emergência com a Brilho Total Limpeza.", true);
+  document.querySelectorAll("[data-whatsapp-emergency]").forEach(link => {
+    link.href = emergencyWhatsAppUrl;
   });
 
   // Atualiza links específicos de cada serviço
@@ -80,7 +90,7 @@ function applyConfigData() {
   }
 
   // Atualiza link de consulta de bairro na seção de contato
-  const coverageMsg = "Olá! Gostaria de consultar a disponibilidade de atendimento para o meu bairro/região.";
+  const coverageMsg = "Olá! Gostaria de consultar a disponibilidade de atendimento para o meu condomínio/imóvel na minha região.";
   document.querySelectorAll("[data-whatsapp-coverage]").forEach(link => {
     link.href = buildWhatsAppLink(coverageMsg);
   });
@@ -89,10 +99,13 @@ function applyConfigData() {
 /**
  * Constrói o link oficial do WhatsApp com a mensagem codificada
  */
-function buildWhatsAppLink(message) {
-  const phone = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.contact?.whatsappRaw) 
-    ? SITE_CONFIG.contact.whatsappRaw 
-    : "5511999990000";
+function buildWhatsAppLink(message, isEmergency = false) {
+  let phone = "5511961816663";
+  if (isEmergency && typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.contact?.emergencyRaw) {
+    phone = SITE_CONFIG.contact.emergencyRaw;
+  } else if (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.contact?.whatsappRaw) {
+    phone = SITE_CONFIG.contact.whatsappRaw;
+  }
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
 

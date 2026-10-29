@@ -1,126 +1,111 @@
 /**
  * Brilho Total Limpeza - Arquivo de Configuração Centralizada
  * 
- * Modifique as informações abaixo para personalizar o site rapidamente
- * com os dados reais de qualquer empresa ou cliente.
+ * Informações reais de atendimento, contatos e serviços da empresa.
  */
 
 const SITE_CONFIG = {
   // Informações da Empresa
   company: {
     name: "Brilho Total Limpeza",
-    tagline: "Seu ambiente limpo, sua tranquilidade garantida",
-    description: "Serviços especializados de limpeza residencial, comercial e pós-obra com alto padrão de qualidade, pontualidade e transparência.",
-    isDemo: true, // Indica claramente que o projeto é uma demonstração comercial
-    demoNotice: "Projeto de Demonstração Comercial - Empresa Fictícia"
+    tagline: "Limpeza Predial, Organização de Closet e Limpeza Pós-Obra",
+    description: "Serviços especializados em limpeza predial para condomínios, organização profissional de closets e higienização técnica pós-obra com alto padrão de qualidade e pontualidade.",
+    isDemo: false
   },
 
   // Configurações de Contato e WhatsApp
   contact: {
-    // Apenas números com DDI e DDD (exemplo: 5511999990000 para São Paulo)
-    whatsappRaw: "5511999990000",
+    // WhatsApp Principal da Empresa
+    whatsappRaw: "5511961816663",
+    whatsappFormatted: "(11) 96181-6663",
     
-    // Telefone formatado para exibição visual
-    whatsappFormatted: "(11) 99999-0000",
-    phoneSecondaryFormatted: "(11) 3333-0000",
+    // Telefone / WhatsApp de Emergência
+    emergencyRaw: "5511986412651",
+    emergencyFormatted: "(11) 98641-2651",
     
-    // E-mail de contato
-    email: "contato@brilhototallimpeza.exemplo.com",
+    // E-mail de Contato
+    email: "marcelaingridy@hotmail.com",
     
     // Horário de atendimento
-    businessHours: "Segunda a Sábado, das 07:30 às 18:30",
+    businessHours: "Segunda a Sábado, das 07:30 às 19:00 (Plantão de Emergência Disponível)",
     
     // Região de atendimento
-    serviceArea: "São Paulo - Capital, Região Metropolitana e Cidades Vizinhas",
+    serviceArea: "São Paulo - Capital, Região Metropolitana, Alphaville e Grande ABC",
     
-    // Endereço fictício de referência
-    addressReference: "Av. Paulista, 1000 - Bela Vista, São Paulo - SP (Atendimento sob demanda em domicílio e empresas)",
+    // Endereço / Referência de Atendimento
+    addressReference: "São Paulo - SP (Atendimento presencial em condomínios, residências e obras)",
 
-    // Mensagem padrão ao clicar nos botões gerais de WhatsApp
-    defaultMessage: "Olá! Conheci o site da Brilho Total Limpeza e gostaria de solicitar um orçamento para o meu ambiente."
+    // Mensagem padrão ao clicar no WhatsApp principal
+    defaultMessage: "Olá! Gostaria de solicitar um orçamento com a Brilho Total Limpeza."
   },
 
-  // Serviços Oferecidos (Exemplos editáveis)
+  // Serviços Oferecidos
   services: [
     {
-      id: "residencial",
-      title: "Limpeza Residencial",
-      badge: "Mais Procurado",
-      shortDescription: "Cuidado minucioso para casas e apartamentos, com planos avulsos ou recorrentes.",
-      image: "assets/images/residencial.jpg",
+      id: "predial",
+      title: "Limpeza Predial",
+      badge: "Condomínios & Edifícios",
+      shortDescription: "Higienização completa e conservação de áreas comuns para condomínios residenciais e comerciais.",
+      image: "assets/images/predial.jpg",
       items: [
-        "Higienização completa de quartos, salas e banheiros",
-        "Limpeza de cozinhas, pias e bancadas",
-        "Aspiração e lavagem de pisos com produtos adequados",
-        "Remoção de pó em móveis e superfícies acessíveis"
+        "Halls de entrada, portarias e recepções",
+        "Corredores, escadarias e elevadores",
+        "Salões de festas, academias e áreas de lazer",
+        "Garagens, vidros de fachada e rotinas de manutenção"
       ],
-      whatsappPrefill: "Olá! Gostaria de um orçamento para Limpeza Residencial."
+      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Limpeza Predial."
     },
     {
-      id: "comercial",
-      title: "Limpeza Comercial & Escritórios",
-      badge: "Corporativo",
-      shortDescription: "Ambientes de trabalho higienizados, organizados e prontos para receber clientes e colaboradores.",
-      image: "assets/images/comercial.jpg",
+      id: "closet",
+      title: "Organização de Closet",
+      badge: "Personal Organizer",
+      shortDescription: "Otimização de espaço, categorização e praticidade para closets, armários e guarda-roupas.",
+      image: "assets/images/closet.jpg",
       items: [
-        "Salas de reunião, estações de trabalho e recepção",
-        "Sanitização de banheiros de alto fluxo",
-        "Higienização de copas e áreas de convivência",
-        "Horários flexíveis (antes ou após o expediente)"
+        "Descarte consciente e triagem de peças com o cliente",
+        "Categorização por cor, tipo e estação do ano",
+        "Padronização de dobras e disposição de cabides",
+        "Organização de calçados, bolsas, acessórios e roupas de cama"
       ],
-      whatsappPrefill: "Olá! Gostaria de um orçamento para Limpeza Comercial/Escritório."
+      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Organização de Closet."
     },
     {
       id: "pos-obra",
       title: "Limpeza Pós-Obra",
-      badge: "Especializada",
-      shortDescription: "Remoção técnica de poeira fina, resíduos de gesso, rejunte e tintas após reformas e construções.",
+      badge: "Técnica & Pesada",
+      shortDescription: "Remoção técnica de poeira fina de gesso, resíduos de rejunte, tintas e acabamentos pós-reforma.",
       image: "assets/images/pos-obra.jpg",
       items: [
-        "Limpeza minuciosa de vidros, esquadrias e trilhos",
-        "Remoção de respingos de tinta e resíduos de rejunte",
-        "Aspiração profissional de poeira de gesso e alvenaria",
-        "Ambiente 100% pronto para morar ou inaugurar"
+        "Limpeza detalhada de vidros, esquadrias e trilhos",
+        "Remoção de respingos de tinta e resíduos de argamassa",
+        "Aspiração profunda de poeira em todos os cantos e móveis",
+        "Ambiente 100% pronto e limpo para você morar ou inaugurar"
       ],
-      whatsappPrefill: "Olá! Gostaria de um orçamento para Limpeza Pós-Obra."
-    },
-    {
-      id: "estofados",
-      title: "Higienização de Estofados",
-      badge: "Saúde & Conforto",
-      shortDescription: "Extração profunda de sujeiras, ácaros e odores em sofás, cadeiras, colchões e tapetes.",
-      image: "assets/images/estofados.jpg",
-      items: [
-        "Sofás de tecido, linho, veludo e couro",
-        "Colchões e cabeceiras estofadas",
-        "Cadeiras de jantar e poltronas corporativas",
-        "Secagem acelerada e produtos dermatologicamente seguros"
-      ],
-      whatsappPrefill: "Olá! Gostaria de um orçamento para Higienização de Estofados."
+      whatsappPrefill: "Olá! Gostaria de solicitar um orçamento para Limpeza Pós-Obra."
     }
   ],
 
-  // Diferenciais Competitivos (Foco em clareza e credibilidade sem promessas não verificadas)
+  // Diferenciais Competitivos
   differentials: [
     {
       icon: "file-text",
-      title: "Orçamento Detalhado e Sem Surpresas",
-      description: "Você sabe exatamente o que está incluso antes do início dos trabalhos, sem cobranças ocultas ou custos imprevistos."
+      title: "Orçamento Transparente e Sem Surpresas",
+      description: "Você sabe exatamente o escopo e os valores antes do início do serviço, sem taxas imprevistas."
     },
     {
       icon: "calendar-clock",
-      title: "Pontualidade e Flexibilidade",
-      description: "Agendamento ágil respeitando sua rotina, com opções para serviços pontuais, semanais, quinzenais ou mensais."
+      title: "Plantão e Atendimento Ágil",
+      description: "Linha direta de emergência e horários flexíveis para atender às necessidades urgentes do seu prédio ou imóvel."
     },
     {
       icon: "shield-check",
-      title: "Cuidado e Respeito com Seu Espaço",
-      description: "Equipes preparadas seguindo checklists rigorosos para proteger pisos nobres, móveis delicados e seus pertences."
+      title: "Cuidado e Respeito com Seus Bens",
+      description: "Profissionais qualificados com métodos seguros para não danificar tecidos finos, pisos nobres e acabamentos recentes."
     },
     {
       icon: "sparkles",
-      title: "Produtos e Materiais Adequados",
-      description: "Utilização de produtos de limpeza eficientes e seguros para crianças e animais domésticos (pet-friendly)."
+      title: "Produtos e Equipamentos Profissionais",
+      description: "Aspiradores de alta potência, produtos específicos para cada superfície e materiais de organização modernos."
     }
   ],
 
@@ -129,50 +114,45 @@ const SITE_CONFIG = {
     {
       step: "01",
       title: "Contato e Briefing Rápido",
-      description: "Você clica no botão do WhatsApp ou preenche o formulário informando a sua cidade, bairro e o tipo de limpeza necessária."
+      description: "Envie uma mensagem pelo WhatsApp ou formulário informando se precisa de Limpeza Predial, Closet ou Pós-Obra."
     },
     {
       step: "02",
       title: "Avaliação da Necessidade",
-      description: "Alinhamos detalhes como metragem aproximada, quantidade de cômodos, estado do ambiente e horário de sua preferência."
+      description: "Entendemos as particularidades do seu espaço, metragem, número de armários ou tamanho do condomínio."
     },
     {
       step: "03",
       title: "Orçamento e Agendamento",
-      description: "Você recebe a proposta clara no WhatsApp com escopo, valor e datas disponíveis para confirmação imediata."
+      description: "Você recebe a proposta detalhada no WhatsApp e confirma o agendamento no dia e horário mais convenientes."
     }
   ],
 
   // Perguntas Frequentes (FAQ)
   faq: [
     {
-      question: "Os produtos e materiais de limpeza estão inclusos no orçamento?",
-      answer: "Sim, para a grande maioria dos serviços (especialmente pós-obra e estofados) levamos todos os equipamentos e insumos profissionais. Para limpezas residenciais de rotina, podemos utilizar nossos insumos ou os de preferência do cliente, conforme alinhado previamente no orçamento."
+      question: "Como funciona a contratação da Limpeza Predial?",
+      answer: "Atendemos condomínios residenciais e prédios comerciais com cronogramas personalizados: diários, semanais ou pontuais para eventos e manutenções especiais. Fornecemos proposta formal detalhada para síndicos e administradoras."
     },
     {
-      question: "Com quanto tempo de antecedência devo agendar o atendimento?",
-      answer: "Recomendamos um prazo de 24 a 48 horas de antecedência para garantir a melhor data e horário. No entanto, sempre consulte nossa equipe pelo WhatsApp para verificar possíveis encaixes de emergência no mesmo dia."
+      question: "Como funciona o serviço de Organização de Closet?",
+      answer: "Nossa especialista (Personal Organizer) avalia o volume de roupas, acessórios e o espaço disponível. Realizamos a triagem junto com você, aplicamos técnicas de dobras funcionais, padronizamos a distribuição e deixamos o dia a dia muito mais prático e elegante."
     },
     {
-      question: "Preciso estar presente no imóvel durante a limpeza?",
-      answer: "Apenas na chegada da equipe para liberação do acesso e repasse de orientações, e ao final para conferência do serviço. Caso prefira acompanhar todo o processo, você é muito bem-vindo."
+      question: "A Limpeza Pós-Obra retira toda a poeira de gesso e tinta?",
+      answer: "Sim! Utilizamos aspiradores profissionais de alta sucção com filtros especiais para reter poeira ultrafina de gesso e alvenaria, além de produtos e raspadores adequados para remoção de respingos de tinta sem arranhar pisos ou vidros."
     },
     {
-      question: "Como é calculado o valor do serviço?",
-      answer: "O orçamento é personalizado considerando a metragem do espaço, número de cômodos, tipo de limpeza (rotina, pesada ou pós-obra) e a frequência desejada (avulsa ou recorrente)."
+      question: "Qual o canal para atendimento urgente ou de emergência?",
+      answer: "Para situações urgentes que precisam de resolução imediata em condomínios ou imóveis, utilize nosso telefone/WhatsApp de emergência no número (11) 98641-2651."
     },
     {
-      question: "Quais são as formas de pagamento aceitas?",
-      answer: "Aceitamos Pix, transferência bancária e cartões de crédito/débito. O pagamento pode ser realizado mediante a conclusão e aprovação dos serviços."
-    },
-    {
-      question: "Este site é uma empresa ativa ou uma demonstração?",
-      answer: "Este site é um projeto de demonstração comercial e portfólio para a marca fictícia 'Brilho Total Limpeza'. Todas as funcionalidades de cálculo e geração de orçamento para o WhatsApp estão 100% operacionais para testes e apresentações comerciais."
+      question: "Quais são as formas de pagamento?",
+      answer: "Aceitamos Pix, transferência bancária e cartões de crédito/débito. Para condomínios e contratos corporativos, também disponibilizamos faturamento via boleto bancário."
     }
   ]
 };
 
-// Congela o objeto para evitar mutações acidentais em tempo de execução
 if (typeof Object.freeze === 'function') {
   Object.freeze(SITE_CONFIG);
 }
